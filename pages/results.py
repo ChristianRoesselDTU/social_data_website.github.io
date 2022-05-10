@@ -57,7 +57,7 @@ matrix = df_merged_scaled.corr(method='pearson')
 mask = np.triu(np.ones_like(matrix, dtype=bool))
 
 fig_heatmap, ax = plt.subplots()
-fig_heatmap = sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f", ax=ax)
+sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f", ax=ax)
 
 boroughs = sorted(df_merged.borough.unique().tolist())
 
@@ -136,7 +136,7 @@ def app():
     )
 
     with st.expander("See the correlation plots for each borough"):
-        for borough in boroughs:
+        for borough in range(len(boroughs)):
             cmap = sns.diverging_palette(
                 250, 
                 15, 
@@ -147,13 +147,13 @@ def app():
                 as_cmap=True
             )
 
-            matrix = df_merged_scaled[df_merged_scaled.borough == borough].corr(method='pearson')
+            matrix = df_merged_scaled[df_merged_scaled.borough == boroughs[borough]].corr(method='pearson')
 
             # Create a mask
             mask = np.triu(np.ones_like(matrix, dtype=bool))
 
-            p, ax = plt.subplots()
-            p = sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f", ax=ax)
+            p = plt.figure()
+            p = sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f")
             st.markdown(f'Showing correlation for {borough}')
             st.write(p)
 
@@ -164,10 +164,10 @@ def app():
         When we break down the correlation for each borough, we do see some interesting correlation between the recycling data, the traffic data and the water quality. 
         This is basically what we wanted to show and thus what we wanted conduct a thorough analysis of, however, because of the limitations due to lack of data, we cannot say for sure that there in fact is a correlation between the features shown.
 
-        Due to limited resources (data-wise and time-wise), we were not able to find a dataset (or multiple datasets) that held enough data for us to conclude on an analysis like the above. However, research have shown that traffic and the amount of waste can have an impact of the water quality of certain neighbouthoods / boroughs.
+        Due to limited resources (data-wise and time-wise), we were not able to find a dataset (or multiple datasets) that held enough data for us to conclude on an analysis like the above.
         """
     )
 
     st.plotly_chart(fig, use_container_width=True, height=600)
     
-    
+    # However, research have shown that traffic and the amount of waste can have an impact of the water quality of certain neighbouthoods / boroughs.
