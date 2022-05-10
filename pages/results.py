@@ -265,3 +265,12 @@ def app():
     st.plotly_chart(fig, use_container_width=True, height=600)
     
     # However, research have shown that traffic and the amount of waste can have an impact of the water quality of certain neighbouthoods / boroughs.
+
+    st.markdown(
+        """
+        ## The End.
+
+        Now that you have seen our story, you can also visit our [GitHub page](https://github.com/ChristianRoesselDTU/social_data_website.github.io) to see how we did it! There, amongst other things, you will find a link to our [Notebook behind the scenes](https://nbviewer.org/github/ChristianRoesselDTU/social_data_website.github.io/blob/8df86f273ec4848afb97228f110fc7c005d13f68/Explainer_Notebook.ipynb#6-Contribution-table)
+        """
+
+    )
