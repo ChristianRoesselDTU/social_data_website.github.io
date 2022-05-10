@@ -321,7 +321,7 @@ def app():
 
         However, Water contamination often is discovered long after it has occurred. This means that the practices of today may have effects on water quality well into the future, well before we understand the full ramifications of transportation and water issues. 
 
-        We there took a look at [this dataset about New York traffic](https://data.cityofnewyork.us/Transportation/Traffic-Volume-Counts-2012-2013-/p424-amsu), containing roughly 27.000 observations of traffic volume counts collected by [The New York City Department of Transportation’s (NYC DOT)](https://www1.nyc.gov/html/dot/html/about/about.shtml) for New York Metropolitan Transportation Council (NYMTC) to validate the New York Best Practice Model (NYBPM) ([source](https://www.kaggle.com/datasets/new-york-city/ny-traffic-volume-counts-2012-2013)). (**Note**: Whilst conducting this work, the dataset has been taken off the [NYC Opendata website](https://opendata.cityofnewyork.us/) and thus the work mentioned in this part (traffic) cannot be dublicated).
+        We there took a look at [this dataset about New York traffic](https://data.cityofnewyork.us/Transportation/Traffic-Volume-Counts-2012-2013-/p424-amsu), containing roughly 392.000 observations of traffic volume counts collected by [The New York City Department of Transportation’s (NYC DOT)](https://www1.nyc.gov/html/dot/html/about/about.shtml) for New York Metropolitan Transportation Council (NYMTC) to validate the New York Best Practice Model (NYBPM) ([source](https://www.kaggle.com/datasets/new-york-city/ny-traffic-volume-counts-2012-2013)). (**Note**: Whilst conducting this work, the dataset has been taken off the [NYC Opendata website](https://opendata.cityofnewyork.us/) and thus the work mentioned in this part (traffic) cannot be dublicated).
 
 
         The dataset used for this analysis contains observations in the time interval '2015-02-07' to '2021-05-09' and has the following (interesting) columns:
@@ -333,6 +333,8 @@ def app():
         Thus, the core steps in the preprocessing of this data consisted of:
         - Enriching the data with latitude and longitude pr "street name" (e.g. 156 Street)
         - Enriching the data with what borough (that is e.g. Queens, Staten Island etc..) these street belong to
+
+        After the dataset had been preprocessed, we ended up with roughly 27.000 rows.
         """
     )
 
