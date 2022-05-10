@@ -304,6 +304,12 @@ def app():
         """
     )
 
+
+    st.image(
+        'images/new_york_traffic.jpg',
+        caption='Picture of Traffic in New York City'
+    )
+
     st.markdown(
         """
 
