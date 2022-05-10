@@ -136,26 +136,45 @@ def app():
     )
 
     with st.expander("See the correlation plots for each borough"):
-        for borough in range(len(boroughs)):
-            cmap = sns.diverging_palette(
-                250, 
-                15, 
-                s=75, 
-                l=40, 
-                n=9, 
-                center='light', 
-                as_cmap=True
-            )
+        cmap = sns.diverging_palette(
+            250, 
+            15, 
+            s=75, 
+            l=40, 
+            n=9, 
+            center='light', 
+            as_cmap=True
+        )
 
-            matrix = df_merged_scaled[df_merged_scaled.borough == boroughs[borough]].corr(method='pearson')
+        matrix = df_merged_scaled[df_merged_scaled.borough == boroughs[0]].corr(method='pearson')
 
-            # Create a mask
-            mask = np.triu(np.ones_like(matrix, dtype=bool))
+        # Create a mask
+        mask = np.triu(np.ones_like(matrix, dtype=bool))
 
-            p = plt.figure()
-            p = sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f")
-            st.markdown(f'Showing correlation for {borough}')
-            st.write(p)
+        p1, ax1 = plt.subplots()
+        sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f", ax=ax1)
+        st.markdown(f'Showing correlation for {boroughs[0]}')
+        st.write(p1)
+
+        cmap = sns.diverging_palette(
+            250, 
+            15, 
+            s=75, 
+            l=40, 
+            n=9, 
+            center='light', 
+            as_cmap=True
+        )
+
+        matrix = df_merged_scaled[df_merged_scaled.borough == boroughs[1]].corr(method='pearson')
+
+        # Create a mask
+        mask = np.triu(np.ones_like(matrix, dtype=bool))
+
+        p2, ax2 = plt.subplots()
+        sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f", ax=ax2)
+        st.markdown(f'Showing correlation for {boroughs[1]}')
+        st.write(p2)
 
     st.markdown(
         """
