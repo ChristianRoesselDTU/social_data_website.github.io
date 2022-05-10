@@ -310,19 +310,16 @@ def app():
         caption='Picture of Traffic in New York City'
     )
 
+    #However, Water contamination often is discovered long after it has occurred. This means that the practices of today may have effects on water quality well into the future, well before we understand the full ramifications of transportation and water issues. 
+    
     st.markdown(
         """
-
-        We want to investigate whether the New York traffic has an influence on the water quality.
 
         While air pollution is the most visible and studied environmental consequence of transportation systems, water pollution and wetlands issues are also of crucial importance. For instance; fuel, particles, and salt-laden runoff from streets and highways result in damage to roadside soil, vegetation and trees, ponds and water supplies ([source](https://courses.washington.edu/gmforum/topics/trans_water/trans_water.htm)). The impact from the road may also contribute to other forms of water pollution, like [water turbidity](https://www.usgs.gov/special-topics/water-science-school/science/turbidity-and-water). The Environmental Protection Agency (EPA) and many States have issued regulations implementing the CWA goal of achieving and maintaining a high standard of water quality in surface and ground waters ([source](https://www.epa.gov/ny)), and [The Clean Water Act](https://www.encyclopedia.com/earth-and-environment/ecology-and-environmentalism/environmental-studies/clean-water-act-1977) gives states the responsibility to monitor and assess their waters and report the results to the EPA.
 
         So, the purpose of this page is to investigate whether huge amounts of traffic has a negative effect on the quality of the drinking water in New York City.
 
-        However, Water contamination often is discovered long after it has occurred. This means that the practices of today may have effects on water quality well into the future, well before we understand the full ramifications of transportation and water issues. 
-
-        We there took a look at [this dataset about New York traffic](https://data.cityofnewyork.us/Transportation/Traffic-Volume-Counts-2012-2013-/p424-amsu), containing roughly 392.000 observations of traffic volume counts collected by [The New York City Department of Transportation’s (NYC DOT)](https://www1.nyc.gov/html/dot/html/about/about.shtml) for New York Metropolitan Transportation Council (NYMTC) to validate the New York Best Practice Model (NYBPM) ([source](https://www.kaggle.com/datasets/new-york-city/ny-traffic-volume-counts-2012-2013)). (**Note**: Whilst conducting this work, the dataset has been taken off the [NYC Opendata website](https://opendata.cityofnewyork.us/) and thus the work mentioned in this part (traffic) cannot be dublicated).
-
+        We then took a look at [this dataset about New York traffic](https://data.cityofnewyork.us/Transportation/Traffic-Volume-Counts-2012-2013-/p424-amsu), containing roughly 392.000 observations of traffic volume counts collected by [The New York City Department of Transportation’s (NYC DOT)](https://www1.nyc.gov/html/dot/html/about/about.shtml) for New York Metropolitan Transportation Council (NYMTC) to validate the New York Best Practice Model (NYBPM) ([source](https://www.kaggle.com/datasets/new-york-city/ny-traffic-volume-counts-2012-2013)). (**Note**: Whilst conducting this work, the dataset has been taken off the [NYC Opendata website](https://opendata.cityofnewyork.us/) and thus the work mentioned in this part (traffic) cannot be dublicated).
 
         The dataset used for this analysis contains observations in the time interval '2015-02-07' to '2021-05-09' and has the following (interesting) columns:
         - Date
