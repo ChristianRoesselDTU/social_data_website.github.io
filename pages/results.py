@@ -57,7 +57,7 @@ matrix = df_merged_scaled.corr(method='pearson')
 mask = np.triu(np.ones_like(matrix, dtype=bool))
 
 fig_heatmap, ax = plt.subplots()
-fig_heatmap = sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f", ax=ax)
+sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f", ax=ax)
 
 boroughs = sorted(df_merged.borough.unique().tolist())
 
@@ -136,7 +136,7 @@ def app():
     )
 
     with st.expander("See the correlation plots for each borough"):
-        for borough in boroughs:
+        for borough in range(len(boroughs)):
             cmap = sns.diverging_palette(
                 250, 
                 15, 
@@ -147,13 +147,13 @@ def app():
                 as_cmap=True
             )
 
-            matrix = df_merged_scaled[df_merged_scaled.borough == borough].corr(method='pearson')
+            matrix = df_merged_scaled[df_merged_scaled.borough == boroughs[borough]].corr(method='pearson')
 
             # Create a mask
             mask = np.triu(np.ones_like(matrix, dtype=bool))
 
-            p, ax = plt.subplots()
-            p = sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f", ax=ax)
+            p = plt.figure()
+            p = sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f")
             st.markdown(f'Showing correlation for {borough}')
             st.write(p)
 
