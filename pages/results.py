@@ -136,6 +136,7 @@ def app():
     )
 
     with st.expander("See the correlation plots for each borough"):
+        # 1
         cmap = sns.diverging_palette(
             250, 
             15, 
@@ -156,6 +157,8 @@ def app():
         st.markdown(f'Showing correlation for {boroughs[0]}')
         st.write(p1)
 
+
+        # 2
         cmap = sns.diverging_palette(
             250, 
             15, 
@@ -176,6 +179,72 @@ def app():
         st.markdown(f'Showing correlation for {boroughs[1]}')
         st.write(p2)
 
+
+        # 3
+        cmap = sns.diverging_palette(
+            250, 
+            15, 
+            s=75, 
+            l=40, 
+            n=9, 
+            center='light', 
+            as_cmap=True
+        )
+
+        matrix = df_merged_scaled[df_merged_scaled.borough == boroughs[2]].corr(method='pearson')
+
+        # Create a mask
+        mask = np.triu(np.ones_like(matrix, dtype=bool))
+
+        p3, ax3 = plt.subplots()
+        sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f", ax=ax3)
+        st.markdown(f'Showing correlation for {boroughs[2]}')
+        st.write(p3)
+
+
+        # 4
+        cmap = sns.diverging_palette(
+            250, 
+            15, 
+            s=75, 
+            l=40, 
+            n=9, 
+            center='light', 
+            as_cmap=True
+        )
+
+        matrix = df_merged_scaled[df_merged_scaled.borough == boroughs[3]].corr(method='pearson')
+
+        # Create a mask
+        mask = np.triu(np.ones_like(matrix, dtype=bool))
+
+        p4, ax4 = plt.subplots()
+        sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f", ax=ax4)
+        st.markdown(f'Showing correlation for {boroughs[3]}')
+        st.write(p4)
+
+
+        # 5
+        cmap = sns.diverging_palette(
+            250, 
+            15, 
+            s=75, 
+            l=40, 
+            n=9, 
+            center='light', 
+            as_cmap=True
+        )
+
+        matrix = df_merged_scaled[df_merged_scaled.borough == boroughs[4]].corr(method='pearson')
+
+        # Create a mask
+        mask = np.triu(np.ones_like(matrix, dtype=bool))
+
+        p5, ax5 = plt.subplots()
+        sns.heatmap(matrix, mask=mask, cmap=cmap, square=True, annot=True, fmt=".2f", ax=ax5)
+        st.markdown(f'Showing correlation for {boroughs[4]}')
+        st.write(p5)
+
     st.markdown(
         """
         **Findings**:
@@ -184,6 +253,12 @@ def app():
         This is basically what we wanted to show and thus what we wanted conduct a thorough analysis of, however, because of the limitations due to lack of data, we cannot say for sure that there in fact is a correlation between the features shown.
 
         Due to limited resources (data-wise and time-wise), we were not able to find a dataset (or multiple datasets) that held enough data for us to conclude on an analysis like the above.
+        """
+    )
+
+    st.markdown(
+        """
+        Please stand by for the plot below to load (it takes about 10 seconds 😅)
         """
     )
 
