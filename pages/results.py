@@ -164,10 +164,10 @@ def app():
         When we break down the correlation for each borough, we do see some interesting correlation between the recycling data, the traffic data and the water quality. 
         This is basically what we wanted to show and thus what we wanted conduct a thorough analysis of, however, because of the limitations due to lack of data, we cannot say for sure that there in fact is a correlation between the features shown.
 
-        Due to limited resources (data-wise and time-wise), we were not able to find a dataset (or multiple datasets) that held enough data for us to conclude on an analysis like the above. However, research have shown that traffic and the amount of waste can have an impact of the water quality of certain neighbouthoods / boroughs.
+        Due to limited resources (data-wise and time-wise), we were not able to find a dataset (or multiple datasets) that held enough data for us to conclude on an analysis like the above.
         """
     )
 
     st.plotly_chart(fig, use_container_width=True, height=600)
     
-    
+    # However, research have shown that traffic and the amount of waste can have an impact of the water quality of certain neighbouthoods / boroughs.
