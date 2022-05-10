@@ -256,6 +256,12 @@ def app():
         """
     )
 
+    st.markdown(
+        """
+        Please stand by for the plot below to load (it takes about 10 seconds 😅)
+        """
+    )
+
     st.plotly_chart(fig, use_container_width=True, height=600)
     
     # However, research have shown that traffic and the amount of waste can have an impact of the water quality of certain neighbouthoods / boroughs.
