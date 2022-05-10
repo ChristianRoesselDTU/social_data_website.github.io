@@ -62,8 +62,10 @@ class MultiPage:
             3. `Traffic Data`
             4. `Results`
 
-            
+
             We hope you enjoy the journey of our website 😊
+
+            If you are cusious about what is happening behind the scenes, take a look at our [GitHub page](https://github.com/ChristianRoesselDTU/social_data_website.github.io) 🐍 - ssssss
 
             (Click to hide)
             """
