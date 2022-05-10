@@ -296,7 +296,7 @@ def app():
 
     st.markdown(
         """
-        If you have been in [New York City](https://en.wikipedia.org/wiki/New_York_City), and if you have tried to move around using vehicles, you have probably experienced that it's almost impossible to get through some of the most annoying traffic jams during rush hour, and that your wallet is empty after a taxi drive which was only "supposed to be a few blocks".
+        If you have been in [New York City](https://en.wikipedia.org/wiki/New_York_City), and if you have tried to move around using vehicles, you have probably experienced that it's almost impossible to get through some of the most annoying traffic jams during rush hour... and that your wallet is empty after a taxi drive which was only "supposed to be a few blocks".
 
         But how bad is the traffic, exactly? And in which [borough](https://en.wikipedia.org/wiki/Borough) is there the most traffic?
 
