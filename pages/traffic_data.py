@@ -394,9 +394,9 @@ def app():
     )
 
 
-    st.markdown(
-        """
-        **Findings**:
-        Some findings?
-        """
-    )
+    # st.markdown(
+    #     """
+    #     **Findings**:
+    #     Some findings?
+    #     """
+    # )
