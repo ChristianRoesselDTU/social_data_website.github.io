@@ -258,6 +258,8 @@ def app():
 
     st.markdown(
         """
+        ## Development of water quality, recycling and traffic from 2015 to 2022!
+        
         Please stand by for the plot below to load (it takes about 10 seconds 😅)
         """
     )
