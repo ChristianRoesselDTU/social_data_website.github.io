@@ -46,19 +46,23 @@ class MultiPage:
         #     """
         # )
 
+        #The idea behind this website setup is for the reader to go through the pages in the following order
+        #The reason why we chose this format was to find a good balance between an author-driven and a reader-driven story so that we could convey our message clearly and understandably but also allow the reader to get into more details and find some additional facts and details to discover.
+
         with st.expander("How to read this website", expanded=True):
             st.write(
             """     
             ## How to read this website
+            
+            Are you curious about the sanity of the water you drink everyday? We took at look at whether water quality is being affected by the traffic and recycling initiatives in New York City.
 
-            The idea behind this website setup is for the reader to go through the pages in the following order
+            To get the best experience of this website, you should go through the pages in the followign order:
             1. `Water Data` 
             2. `Recycling Data` 
             3. `Traffic Data`
             4. `Results`
 
-            The reason why we chose this format was to find a good balance between an author-driven and a reader-driven story so that we could convey our message clearly and understandably but also allow the reader to get into more details and find some additional facts and details to discover.
-
+            
             We hope you enjoy the journey of our website 😊
 
             (Click to hide)
